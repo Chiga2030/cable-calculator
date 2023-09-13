@@ -1,3 +1,4 @@
+import StyledComponentsRegistry from '@/layer-app/AntdRegistry'
 import '@/layer-app/styles/globals.css'
 import type { Metadata, } from 'next'
 import { Inter as interFont, } from 'next/font/google'
@@ -17,7 +18,9 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body className={ inter.className }>
-        { children }
+        <StyledComponentsRegistry>
+          { children }
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
