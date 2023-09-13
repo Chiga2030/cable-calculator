@@ -3,7 +3,7 @@ import '@/layer-app/styles/globals.css'
 import type { Metadata, } from 'next'
 import { Inter as interFont, } from 'next/font/google'
 
-const inter = interFont({ subsets: [ 'latin', 'cyrillic', ], weight: [ '100', '400' ] })
+import { Providers, } from '@/shared/model/store/provider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,9 +18,11 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body className={ inter.className }>
-        <StyledComponentsRegistry>
-          { children }
-        </StyledComponentsRegistry>
+        <Providers>
+          <StyledComponentsRegistry>
+            { children }
+          </StyledComponentsRegistry>
+        </Providers>
       </body>
     </html>
   )
