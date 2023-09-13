@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "only-build": "next build",
+    "only-start": "next start",
+    "start": "npm run only-build && npm run only-start",
     "lint": "next lint"
   },
   "dependencies": {
