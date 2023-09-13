@@ -1,9 +1,15 @@
-import StyledComponentsRegistry from '@/layer-app/AntdRegistry'
 import '@/layer-app/styles/globals.css'
 import type { Metadata, } from 'next'
 import { Inter as interFont, } from 'next/font/google'
 
+import StyledComponentsRegistry from '@/layer-app/AntdRegistry'
 import { Providers, } from '@/shared/model/store/provider'
+
+
+const inter = interFont({
+  subsets: [ 'latin', 'cyrillic', ],
+  weight: [ '100', '400', ],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
