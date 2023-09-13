@@ -19,8 +19,7 @@
     "plugin:import/typescript",
     "plugin:boundaries/recommended",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "react-app/jest"
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [
     {
@@ -91,6 +90,7 @@
     ]
   },
   "rules": {
+    "import/no-named-as-default": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-unused-vars": [
