@@ -1,0 +1,1 @@
+export { TotalWeightInfo } from './TotalWeightInfo'
